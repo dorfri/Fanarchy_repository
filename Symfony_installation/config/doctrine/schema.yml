@@ -1,0 +1,1483 @@
+City:
+  tableName: city
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Country_id:
+      type: integer(4)
+      notnull: true
+    State_id:
+      type: integer(4)
+  relations:
+    Country:
+      local: Country_id
+      foreign: id
+    State:
+      local: State_id
+      foreign: id
+Address:
+  tableName: address
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    address1:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    address2:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    postcode:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    City_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    City:
+      local: City_id
+      foreign: id
+    Segments:
+      class: Segment
+      refClass: MtmSegment2address
+      local: address_id
+      foreign: segment_id
+Answer:
+  tableName: answer
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    text:
+      type: string(100)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Mediapicture_id:
+      type: integer(4)
+    Mediavideo_id:
+      type: integer(4)
+    Vote_id:
+      type: integer(4)
+    Question_id:
+      type: integer(4)
+  relations:
+    Mediapicture:
+      local: Mediapicture_id
+      foreign: id
+    Mediavideo:
+      local: Mediavideo_id
+      foreign: id
+    Vote:
+      local: Vote_id
+      foreign: id
+    Question:
+      local: Question_id
+      foreign: id
+    AnswerValues:
+      class: Answervalue
+      refClass: MtmAnswer2answervalue
+      local: answer_id
+      foreign: answervalue_id
+MtmAnswer2answervalue:
+  tableName: mtm_answer2answervalue
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    answer_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    answervalue_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    Answer:
+      foreignAlias: answerValues
+      local: answer_id
+      foreign: id
+    Answervalue:
+      foreignAlias: answers
+      local: answervalue_id
+      foreign: id
+Answervalue:
+  tableName: answervalue
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    valuenumeric:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    valueyesno:
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    valuecomment:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    chosenottovotereason:
+      type: string(20)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Voteinstance_id:
+      type: integer(4)
+  relations:
+    Voteinstance:
+      local: Voteinstance_id
+      foreign: id
+    Answers:
+      class: Answer
+      refClass: MtmAnswer2answervalue
+      local: answervalue_id
+      foreign: answer_id
+    SiteUsers:
+      class: Siteusers
+      refClass: MtmSiteusers2answervalue
+      local: answervalue_id
+      foreign: user_id
+Continent:
+  tableName: continent
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(40)
+      notnull: true
+      unsigned: false
+      fixed: false
+Country:
+  tableName: country
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(200)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Continent_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    Continent:
+      local: Continent_id
+      foreign: id
+Education:
+  tableName: education
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    timeperiodstart:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    timeperiodend:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    concentrations:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    attendedfor:
+      type: string(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    SiteUsers:
+      class: Siteusers
+      refClass: MtmSiteusers2education
+      local: education_id
+      foreign: siteusers_id
+Exposuredata:
+  tableName: exposuredata
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    totalexposures:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    firstexposuredate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    lastexposuredate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+Fangroup:
+  tableName: fangroup
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    agerangestart:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    agerangeend:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    gender:
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    homepage:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Team_id:
+      type: integer(4)
+    Address_id:
+      type: integer(4)
+    Mediapicture_id:
+      type: integer(4)
+  relations:
+    Team:
+      local: Team_id
+      foreign: id
+    Address:
+      local: Address_id
+      foreign: id
+    Mediapicture:
+      local: Mediapicture_id
+      foreign: id
+    Segments:
+      class: Segment
+      refClass: MtmSegment2fangroup
+      local: fangroup_id
+      foreign: segment_id
+    SiteUsers:
+      class: Siteusers
+      refClass: MtmFangroup2siteusers
+      local: fangroup_id
+      foreign: siteuser_id
+League:
+  tableName: league
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Address_id:
+      type: integer(4)
+  relations:
+    Address:
+      local: Address_id
+      foreign: id
+Mediapicture:
+  tableName: mediapicture
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    url:
+      type: string(100)
+      notnull: true
+      unsigned: false
+      fixed: false
+    width:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    height:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    hovertext:
+      type: string(200)
+      notnull: true
+      unsigned: false
+      fixed: false
+    onclickaction:
+      type: string(200)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Exposuredata_id:
+      type: integer(4)
+  relations:
+    Exposuredata:
+      local: Exposuredata_id
+      foreign: id
+Mediavideo:
+  tableName: mediavideo
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    url:
+      type: string(100)
+      notnull: true
+      unsigned: false
+      fixed: false
+    width:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    height:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    hovertext:
+      type: string(200)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Exposuredata_id:
+      type: integer(4)
+  relations:
+    Exposuredata:
+      local: Exposuredata_id
+      foreign: id
+MtmFangroup2siteusers:
+  tableName: mtm_fangroup2siteusers
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    fangroup_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    siteuser_id:
+      type: integer(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    Fangroup:
+      local: fangroup_id
+      foreign: id
+    Siteusers:
+      local: siteuser_id
+      foreign: id
+MtmSegment2address:
+  tableName: mtm_segment2address
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    segment_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    address_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    Address:
+      local: address_id
+      foreign: id
+    Segment:
+      local: segment_id
+      foreign: id
+MtmSegment2fangroup:
+  tableName: mtm_segment2fangroup
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    segment_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    fangroup_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    Fangroup:
+      local: fangroup_id
+      foreign: id
+    Segment:
+      local: segment_id
+      foreign: id
+MtmSiteusers2answervalue:
+  tableName: mtm_siteusers2answervalue
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    user_id:
+      type: integer(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    answervalue_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    Answervalue:
+      local: answervalue_id
+      foreign: id
+    Siteusers:
+      local: user_id
+      foreign: id
+MtmSiteusers2education:
+  tableName: mtm_siteusers2education
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    siteusers_id:
+      type: integer(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    education_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    Education:
+      local: education_id
+      foreign: id
+    Siteusers:
+      local: siteusers_id
+      foreign: id
+MtmSiteusers2team:
+  tableName: mtm_siteusers2team
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    team_id:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    siteusers_id:
+      type: integer(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    joindate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    expirationdate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+  relations:
+    Team:
+      local: team_id
+      foreign: id
+    Siteusers:
+      local: siteusers_id
+      foreign: id
+Priviclass:
+  tableName: priviclass
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    level:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+Productinfo:
+  tableName: productinfo
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: true
+      fixed: false
+    code:
+      default: ''
+      unique: true
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    name:
+      default: ''
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    updateddt:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    description:
+      type: string
+      notnull: true
+      unsigned: false
+      fixed: false
+    prodduration:
+      default: ''
+      type: string(3)
+      notnull: true
+      unsigned: false
+      fixed: false
+    prodtype:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    promotioncode:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    proddurationunits:
+      default: MO
+      type: string(2)
+      notnull: true
+      unsigned: false
+      fixed: false
+    prodnumberusages:
+      default: 1
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    mustbeloggedin:
+      default: N
+      type: string(1)
+      notnull: true
+      unsigned: false
+      fixed: true
+    purchasecaption:
+      default: ''
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    showexpirationdate:
+      default: ''
+      type: string(1)
+      notnull: true
+      unsigned: false
+      fixed: true
+    billingperiod:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    freeperiod:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    freeperiodunit:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    isarbproduct:
+      default: 0
+      type: enum(1)
+      notnull: true
+      values: [0,1]
+      unsigned: false
+      fixed: false
+    billingperiodunit:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    emailtosite:
+      default: 0
+      type: enum(1)
+      notnull: true
+      values: [0,1]
+      unsigned: false
+      fixed: false
+    prodcurrency:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+PPI:
+  tableName: ppi
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(5)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    code:
+      default: ''
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    promotioncode:
+      default: ''
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    name:
+      default: ''
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    prodprice:
+      default: ''
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    startdate:
+      type: date(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    enddate:
+      type: date(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    updateddt:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    description:
+      type: string
+      notnull: true
+      unsigned: false
+      fixed: false
+    prodduration:
+      default: ''
+      type: string(3)
+      notnull: true
+      unsigned: false
+      fixed: false
+    autorenew:
+      default: N
+      type: string(1)
+      notnull: true
+      unsigned: false
+      fixed: true
+    isactive:
+      default: 1
+      type: enum(1)
+      notnull: true
+      values: [0,1]
+      unsigned: false
+      fixed: false
+Question:
+  tableName: question
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    text:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    sequence:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    maxanswers:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Vote_id:
+      type: integer(4)
+    Questiontype_id:
+      type: integer(4)
+  relations:
+    Vote:
+      local: Vote_id
+      foreign: id
+    Questiontype:
+      local: Questiontype_id
+      foreign: id
+Questiontype:
+  tableName: questiontype
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(30)
+      unsigned: false
+      fixed: false
+    minanswers:
+      type: integer(1)
+      notnull: true
+      unsigned: false
+      fixed: false
+    maxanswers:
+      type: integer(1)
+      notnull: true
+      unsigned: false
+      fixed: false
+    htmlpresentation:
+      type: string(250)
+      notnull: true
+      unsigned: false
+      fixed: false
+    isboolean:
+      type: integer(1)
+      notnull: true
+      unsigned: false
+      fixed: false
+Segment:
+  tableName: segment
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    agerangestart:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    agerangeend:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    estimatedreach:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Gender_id:
+      type: integer(4)
+  relations:
+    Gender:
+      local: Gender_id
+      foreign: id
+    Addresses:
+      class: Address
+      refClass: MtmSegment2address
+      local: segment_id
+      foreign: address_id
+    Fangroups:
+      class: Fangroup
+      refClass: MtmSegment2fangroup
+      local: segment_id
+      foreign: fangroup_id
+Siteusers:
+  tableName: siteusers
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(10)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    firstname:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    lastname:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    email:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    dateofbirth:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    password:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    sexorientation:
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    relationshipstatus:
+      type: string(30)
+      notnull: true
+      unsigned: false
+      fixed: false
+    relationshipwith:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    anniversarydate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    religion:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    politicalview:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    createddate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    isactive:
+      type: integer(1)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Address_id:
+      type: integer(4)
+    Priviclass_id:
+      type: integer(4)
+    Profilepicture_id:
+      type: integer(4)
+    Education_id:
+      type: integer(4)
+    Gender_id:
+      type: integer(4)
+    Language_id:
+      type: integer(4)
+  relations:
+    Address:
+      local: Address_id
+      foreign: id
+    Priviclass:
+      local: Priviclass_id
+      foreign: id
+    Mediapicture:
+      local: Profilepicture_id
+      foreign: id
+    Education:
+      local: Education_id
+      foreign: id
+    Gender:
+      local: Gender_id
+      foreign: id
+    Language:
+      local: Language_id
+      foreign: id
+    AnswerValues:
+      class: Answervalue
+      refClass: MtmSiteusers2answervalue
+      local: user_id
+      foreign: answervalue_id
+    Educations:
+      class: Education
+      refClass: MtmSiteusers2education
+      local: siteusers_id
+      foreign: education_id
+    Fangroups:
+      class: Fangroup
+      refClass: MtmFangroup2siteusers
+      local: siteuser_id
+      foreign: fangroup_id
+    Teams:
+      class: Team
+      refClass: MtmSiteusers2team
+      local: siteusers_id
+      foreign: team_id
+Sitevars:
+  tableName: sitevars
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    value:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    description:
+      type: string(55)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Team_id:
+      type: integer(4)
+  relations:
+    Team:
+      local: Team_id
+      foreign: id
+Sporttype:
+  tableName: sporttype
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    description:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+State:
+  tableName: states
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(200)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Country_id:
+      type: integer(4)
+  relations:
+    Country:
+      local: Country_id
+      foreign: id
+Status:
+  tableName: status
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    description:
+      type: string(250)
+      notnull: true
+      unsigned: false
+      fixed: false
+Team:
+  tableName: team
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(250)
+      notnull: true
+      unsigned: false
+      fixed: false
+    websiteurl:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    stadiumname:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    phonenumber:
+      type: string(20)
+      notnull: true
+      unsigned: false
+      fixed: false
+    fax:
+      type: string(10)
+      notnull: true
+      unsigned: false
+      fixed: false
+    createddate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Sporttype_id:
+      type: integer(4)
+    League_id:
+      type: integer(4)
+    Mediapicture_id:
+      type: integer(4)
+    Homeaddress_id:
+      type: integer(4)
+  relations:
+    Sporttype:
+      local: Sporttype_id
+      foreign: id
+    League:
+      local: League_id
+      foreign: id
+    Mediapicture:
+      local: Mediapicture_id
+      foreign: id
+    Address:
+      local: Homeaddress_id
+      foreign: id
+    SiteUsers:
+      class: Siteusers
+      refClass: MtmSiteusers2team
+      local: team_id
+      foreign: siteusers_id
+Teamsiteusersaddnlinfo:
+  tableName: teamsiteusersaddnlinfo
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    jobtitle:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    phonenumber:
+      type: string(20)
+      notnull: true
+      unsigned: false
+      fixed: false
+    fax:
+      type: string(20)
+      notnull: true
+      unsigned: false
+      fixed: false
+    mobile:
+      type: string(20)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Siteusers_id:
+      type: integer(10)
+    Priviclass_id:
+      type: integer(4)
+  relations:
+    Siteusers:
+      local: Siteusers_id
+      foreign: id
+    Priviclass:
+      local: Priviclass_id
+      foreign: id
+Timezone:
+  tableName: timezone
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    name:
+      type: string(50)
+      notnull: true
+      unsigned: false
+      fixed: false
+    difffromgmt:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+Vote:
+  tableName: vote
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    title:
+      type: string(40)
+      notnull: true
+      unsigned: false
+      fixed: false
+    summary:
+      type: string(250)
+      notnull: true
+      unsigned: false
+      fixed: false
+    text:
+      type: string
+      notnull: true
+      unsigned: false
+      fixed: false
+    activationstarttime:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    activationendtime:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    resultpublishplandate:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    isresultpublishd:
+      type: integer(1)
+      notnull: true
+      unsigned: false
+      fixed: false
+    creationtime:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    allowfreemium:
+      type: integer(1)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Mediapicture_id:
+      type: integer(4)
+    Team_id:
+      type: integer(4)
+    Mediavideo_id:
+      type: integer(4)
+    Timezone_id:
+      type: integer(4)
+    Status_id:
+      type: integer(4)
+    Segment_id:
+      type: integer(4)
+  relations:
+    Mediapicture:
+      local: Mediapicture_id
+      foreign: id
+    Team:
+      local: Team_id
+      foreign: id
+    Mediavideo:
+      local: Mediavideo_id
+      foreign: id
+    Timezone:
+      local: Timezone_id
+      foreign: id
+    Status:
+      local: Status_id
+      foreign: id
+    Segment:
+      local: Segment_id
+      foreign: id
+Voteinstance:
+  tableName: voteinstance
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    participation:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    totalpageviews:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    totalshared:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    totalcomments:
+      type: integer(4)
+      notnull: true
+      unsigned: false
+      fixed: false
+    creationtime:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+    Vote_id:
+      type: integer(4)
+  relations:
+    Vote:
+      local: Vote_id
+      foreign: id
+Work:
+  tableName: work
+  connection: doctrine
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+      unsigned: false
+      fixed: false
+    position:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    citytown:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    description:
+      type: string(255)
+      notnull: true
+      unsigned: false
+      fixed: false
+    timeperiod:
+      type: timestamp(25)
+      notnull: true
+      unsigned: false
+      fixed: false
+Language:
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+    name:
+      type: string(255)
+      notnull: true
+PaymentRegister:
+  columns:
+    id:
+      primary: true
+      type: integer(10)
+      autoincrement: true
+    createdatetime:
+      type: timestamp
+      notnull: true
+    ppi_id:
+      type: integer(5)
+    Siteusers_id:
+      type: integer(10)
+  relations:
+    PPI:
+      local: ppi_id
+      foreign: id
+    Siteusers:
+      local: Siteusers_id
+      foreign: id
+Gender:
+  columns:
+    id:
+      primary: true
+      type: integer(4)
+      autoincrement: true
+    name:
+      type: string(10)
+      notnull: true

@@ -1,0 +1,1549 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<orm-designer version="1.4.6.488">
+
+  <module import-format="DoctrineYml" import-path="schema.yml" name="fanarchy" visBkColor="15987704" visSizeX="0" visSizeX2="1792" visSizeY="0" visSizeY2="1775">
+    <table name="City" visPositionX="51" visPositionY="40" visSizeX="0" visSizeX2="122" visSizeY="0" visSizeY2="73">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Country_id" required="true" size="4" type="integer"/>
+      <column name="State_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">city</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Address" visPositionX="279" visPositionY="40" visSizeX="0" visSizeX2="114" visSizeY="0" visSizeY2="87">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="address1" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="address2" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="postcode" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="City_id" required="true" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">address</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Answer" visPositionX="490" visPositionY="40" visSizeX="0" visSizeX2="140" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="text" required="true" size="100" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Mediapicture_id" size="4" type="integer"/>
+      <column name="Mediavideo_id" size="4" type="integer"/>
+      <column name="Vote_id" size="4" type="integer"/>
+      <column name="Question_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">answer</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="MtmAnswer2answervalue" visPositionX="714" visPositionY="40" visSizeX="0" visSizeX2="140" visSizeY="0" visSizeY2="74">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="answer_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="answervalue_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">mtm_answer2answervalue</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Answervalue" visPositionX="923" visPositionY="40" visSizeX="0" visSizeX2="169" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="valuenumeric" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="valueyesno" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="valuecomment" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="chosenottovotereason" required="true" size="20" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Voteinstance_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">answervalue</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Continent" visPositionX="1182" visPositionY="40" visSizeX="0" visSizeX2="99" visSizeY="0" visSizeY2="45">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="40" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">continent</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Country" visPositionX="1392" visPositionY="40" visSizeX="0" visSizeX2="128" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="200" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Continent_id" required="true" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">country</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Education" visPositionX="1600" visPositionY="40" visSizeX="0" visSizeX2="159" visSizeY="0" visSizeY2="87">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="timeperiodstart" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="timeperiodend" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="concentrations" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="attendedfor" required="true" size="25" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">education</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Exposuredata" visPositionX="27" visPositionY="391" visSizeX="0" visSizeX2="170" visSizeY="0" visSizeY2="73">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="totalexposures" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="firstexposuredate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="lastexposuredate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">exposuredata</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Fangroup" visPositionX="266" visPositionY="391" visSizeX="0" visSizeX2="140" visSizeY="0" visSizeY2="143">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="agerangestart" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="agerangeend" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="gender" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="homepage" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Team_id" size="4" type="integer"/>
+      <column name="Address_id" size="4" type="integer"/>
+      <column name="Mediapicture_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">fangroup</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="League" visPositionX="499" visPositionY="391" visSizeX="0" visSizeX2="122" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Address_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">league</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Mediapicture" visPositionX="711" visPositionY="391" visSizeX="0" visSizeX2="145" visSizeY="0" visSizeY2="115">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="url" required="true" size="100" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="width" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="height" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="hovertext" required="true" size="200" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="onclickaction" required="true" size="200" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Exposuredata_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">mediapicture</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Mediavideo" visPositionX="935" visPositionY="391" visSizeX="0" visSizeX2="145" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="url" required="true" size="100" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="width" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="height" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="hovertext" required="true" size="200" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Exposuredata_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">mediavideo</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="MtmFangroup2siteusers" visPositionX="1164" visPositionY="391" visSizeX="0" visSizeX2="136" visSizeY="0" visSizeY2="74">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="fangroup_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="siteuser_id" required="true" size="10" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">mtm_fangroup2siteusers</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="MtmSegment2address" visPositionX="1393" visPositionY="391" visSizeX="0" visSizeX2="125" visSizeY="0" visSizeY2="74">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="segment_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="address_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">mtm_segment2address</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="MtmSegment2fangroup" visPositionX="1614" visPositionY="391" visSizeX="0" visSizeX2="131" visSizeY="0" visSizeY2="74">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="segment_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="fangroup_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">mtm_segment2fangroup</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="MtmSiteusers2answervalue" visPositionX="38" visPositionY="742" visSizeX="0" visSizeX2="148" visSizeY="0" visSizeY2="74">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="user_id" required="true" size="10" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="answervalue_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">mtm_siteusers2answervalue</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="MtmSiteusers2education" visPositionX="267" visPositionY="742" visSizeX="0" visSizeX2="137" visSizeY="0" visSizeY2="74">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="siteusers_id" required="true" size="10" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="education_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">mtm_siteusers2education</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="MtmSiteusers2team" visPositionX="482" visPositionY="742" visSizeX="0" visSizeX2="155" visSizeY="0" visSizeY2="102">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="team_id" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="siteusers_id" required="true" size="10" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="joindate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="expirationdate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">mtm_siteusers2team</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Priviclass" visPositionX="734" visPositionY="742" visSizeX="0" visSizeX2="99" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="level" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">priviclass</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Productinfo" visPositionX="930" visPositionY="742" visSizeX="0" visSizeX2="155" visSizeY="0" visSizeY2="297">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">true</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="code" required="true" size="255" type="string" unique="true">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="name" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="updateddt" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" required="true" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="prodduration" required="true" size="3" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="prodtype" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="promotioncode" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="MO" name="proddurationunits" required="true" size="2" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="1" name="prodnumberusages" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="N" name="mustbeloggedin" required="true" size="1" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">true</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="purchasecaption" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="showexpirationdate" required="true" size="1" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">true</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="billingperiod" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="freeperiod" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="freeperiodunit" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="0" name="isarbproduct" required="true" size="1" type="enum" values="0,1">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="billingperiodunit" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="0" name="emailtosite" required="true" size="1" type="enum" values="0,1">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="prodcurrency" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">productinfo</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="PPI" visPositionX="1163" visPositionY="742" visSizeX="0" visSizeX2="138" visSizeY="0" visSizeY2="185">
+      <column auto-increment="true" name="id" primary="true" size="5" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="code" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="promotioncode" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="name" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="prodprice" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="startdate" required="true" size="25" type="date">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="enddate" required="true" size="25" type="date">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="updateddt" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" required="true" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="''" name="prodduration" required="true" size="3" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column default="N" name="autorenew" required="true" size="1" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">true</attribute>
+        </orm-properties>
+      </column>
+      <column default="1" name="isactive" required="true" size="1" type="enum" values="0,1">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">ppi</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Question" visPositionX="1384" visPositionY="742" visSizeX="0" visSizeX2="144" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="text" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="sequence" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="maxanswers" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Vote_id" size="4" type="integer"/>
+      <column name="Questiontype_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">question</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Questiontype" visPositionX="1605" visPositionY="742" visSizeX="0" visSizeX2="150" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" size="30" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="minanswers" required="true" size="1" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="maxanswers" required="true" size="1" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="htmlpresentation" required="true" size="250" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="isboolean" required="true" size="1" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">questiontype</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Segment" visPositionX="90" visPositionY="1044" visSizeX="0" visSizeX2="140" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="agerangestart" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="agerangeend" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="estimatedreach" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Gender_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">segment</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Siteusers" visPositionX="253" visPositionY="1093" visSizeX="0" visSizeX2="165" visSizeY="0" visSizeY2="311">
+      <column auto-increment="true" name="id" primary="true" size="10" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="firstname" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="lastname" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="email" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="dateofbirth" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="password" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="sexorientation" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="relationshipstatus" required="true" size="30" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="relationshipwith" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="anniversarydate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="religion" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="politicalview" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="createddate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="isactive" required="true" size="1" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Address_id" size="4" type="integer"/>
+      <column name="Priviclass_id" size="4" type="integer"/>
+      <column name="Profilepicture_id" size="4" type="integer"/>
+      <column name="Education_id" size="4" type="integer"/>
+      <column name="Gender_id" size="4" type="integer"/>
+      <column name="Language_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">siteusers</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Sitevars" visPositionX="499" visPositionY="1093" visSizeX="0" visSizeX2="121" visSizeY="0" visSizeY2="87">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="value" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" required="true" size="55" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Team_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">sitevars</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Sporttype" visPositionX="721" visPositionY="1093" visSizeX="0" visSizeX2="126" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">sporttype</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="State" visPositionX="947" visPositionY="1093" visSizeX="0" visSizeX2="122" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="200" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Country_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">states</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Status" visPositionX="1169" visPositionY="1093" visSizeX="0" visSizeX2="126" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" required="true" size="250" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">status</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Team" visPositionX="1379" visPositionY="1093" visSizeX="0" visSizeX2="154" visSizeY="0" visSizeY2="185">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="250" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="websiteurl" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="stadiumname" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="phonenumber" required="true" size="20" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="fax" required="true" size="10" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="createddate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Sporttype_id" size="4" type="integer"/>
+      <column name="League_id" size="4" type="integer"/>
+      <column name="Mediapicture_id" size="4" type="integer"/>
+      <column name="Homeaddress_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">team</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Teamsiteusersaddnlinfo" visPositionX="1611" visPositionY="1093" visSizeX="0" visSizeX2="137" visSizeY="0" visSizeY2="115">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="jobtitle" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="phonenumber" required="true" size="20" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="fax" required="true" size="20" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="mobile" required="true" size="20" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Siteusers_id" size="10" type="integer"/>
+      <column name="Priviclass_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">teamsiteusersaddnlinfo</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Timezone" visPositionX="48" visPositionY="1444" visSizeX="0" visSizeX2="127" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="name" required="true" size="50" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="difffromgmt" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">timezone</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Vote" visPositionX="244" visPositionY="1444" visSizeX="0" visSizeX2="184" visSizeY="0" visSizeY2="241">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="title" required="true" size="40" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="summary" required="true" size="250" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="text" required="true" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="activationstarttime" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="activationendtime" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="resultpublishplandate" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="isresultpublishd" required="true" size="1" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="creationtime" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="allowfreemium" required="true" size="1" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Mediapicture_id" size="4" type="integer"/>
+      <column name="Team_id" size="4" type="integer"/>
+      <column name="Mediavideo_id" size="4" type="integer"/>
+      <column name="Timezone_id" size="4" type="integer"/>
+      <column name="Status_id" size="4" type="integer"/>
+      <column name="Segment_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">vote</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Voteinstance" visPositionX="486" visPositionY="1444" visSizeX="0" visSizeX2="148" visSizeY="0" visSizeY2="115">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="participation" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="totalpageviews" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="totalshared" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="totalcomments" required="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="creationtime" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="Vote_id" size="4" type="integer"/>
+      <orm-properties>
+        <attribute name="tableName">voteinstance</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Work" visPositionX="714" visPositionY="1444" visSizeX="0" visSizeX2="140" visSizeY="0" visSizeY2="87">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="position" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="citytown" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="description" required="true" size="255" type="string">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <column name="timeperiod" required="true" size="25" type="timestamp">
+        <orm-properties>
+          <attribute name="unsigned">false</attribute>
+          <attribute name="fixed">false</attribute>
+        </orm-properties>
+      </column>
+      <orm-properties>
+        <attribute name="tableName">work</attribute>
+        <attribute name="connection">doctrine</attribute>
+      </orm-properties>
+    </table>
+    <table name="Language" visPositionX="956" visPositionY="1444" visSizeX="0" visSizeX2="104" visSizeY="0" visSizeY2="45">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer"/>
+      <column name="name" required="true" size="255" type="string"/>
+    </table>
+    <table name="PaymentRegister" visPositionX="1160" visPositionY="1444" visSizeX="0" visSizeX2="143" visSizeY="0" visSizeY2="73">
+      <column auto-increment="true" name="id" primary="true" size="10" type="integer"/>
+      <column name="createdatetime" required="true" type="timestamp"/>
+      <column name="ppi_id" size="5" type="integer"/>
+      <column name="Siteusers_id" size="10" type="integer"/>
+    </table>
+    <table name="Gender" visPositionX="18" visPositionY="1226" visSizeX="0" visSizeX2="99" visSizeY="0" visSizeY2="45">
+      <column auto-increment="true" name="id" primary="true" size="4" type="integer"/>
+      <column name="name" required="true" size="10" type="string"/>
+    </table>
+    <foreign-key from="City" name="FK_City_Country_id" to="Country">
+      <foreign-key-column from="Country_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="City" name="FK_City_State_id" to="State">
+      <foreign-key-column from="State_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Address" name="FK_Address_City_id" to="City">
+      <foreign-key-column from="City_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Answer" name="FK_Answer_Mediapicture_id" to="Mediapicture">
+      <foreign-key-column from="Mediapicture_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Answer" name="FK_Answer_Mediavideo_id" to="Mediavideo">
+      <foreign-key-column from="Mediavideo_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Answer" name="FK_Answer_Vote_id" to="Vote">
+      <foreign-key-column from="Vote_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Answer" name="FK_Answer_Question_id" to="Question">
+      <foreign-key-column from="Question_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmAnswer2answervalue" name="FK_MtmAnswer2answervalue_Answer_id" owning-alias="answerValues" to="Answer">
+      <foreign-key-column from="answer_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmAnswer2answervalue" name="FK_MtmAnswer2answervalue_Answervalue_id" owning-alias="answers" to="Answervalue">
+      <foreign-key-column from="answervalue_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Answervalue" name="FK_Answervalue_Voteinstance_id" to="Voteinstance">
+      <foreign-key-column from="Voteinstance_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Country" name="FK_Country_Continent_id" to="Continent">
+      <foreign-key-column from="Continent_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Fangroup" name="FK_Fangroup_Team_id" to="Team">
+      <foreign-key-column from="Team_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Fangroup" name="FK_Fangroup_Address_id" to="Address">
+      <foreign-key-column from="Address_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Fangroup" name="FK_Fangroup_Mediapicture_id" to="Mediapicture">
+      <foreign-key-column from="Mediapicture_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="League" name="FK_League_Address_id" to="Address">
+      <foreign-key-column from="Address_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Mediapicture" name="FK_Mediapicture_Exposuredata_id" to="Exposuredata">
+      <foreign-key-column from="Exposuredata_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Mediavideo" name="FK_Mediavideo_Exposuredata_id" to="Exposuredata">
+      <foreign-key-column from="Exposuredata_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmFangroup2siteusers" name="FK_MtmFangroup2siteusers_Fangroup_id" to="Fangroup">
+      <foreign-key-column from="fangroup_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmFangroup2siteusers" name="FK_MtmFangroup2siteusers_Siteusers_id" to="Siteusers">
+      <foreign-key-column from="siteuser_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSegment2address" name="FK_MtmSegment2address_Address_id" to="Address">
+      <foreign-key-column from="address_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSegment2address" name="FK_MtmSegment2address_Segment_id" to="Segment">
+      <foreign-key-column from="segment_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSegment2fangroup" name="FK_MtmSegment2fangroup_Fangroup_id" to="Fangroup">
+      <foreign-key-column from="fangroup_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSegment2fangroup" name="FK_MtmSegment2fangroup_Segment_id" to="Segment">
+      <foreign-key-column from="segment_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSiteusers2answervalue" name="FK_MtmSiteusers2answervalue_Answervalue_id" to="Answervalue">
+      <foreign-key-column from="answervalue_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSiteusers2answervalue" name="FK_MtmSiteusers2answervalue_Siteusers_id" to="Siteusers">
+      <foreign-key-column from="user_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSiteusers2education" name="FK_MtmSiteusers2education_Education_id" to="Education">
+      <foreign-key-column from="education_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSiteusers2education" name="FK_MtmSiteusers2education_Siteusers_id" to="Siteusers">
+      <foreign-key-column from="siteusers_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSiteusers2team" name="FK_MtmSiteusers2team_Team_id" to="Team">
+      <foreign-key-column from="team_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MtmSiteusers2team" name="FK_MtmSiteusers2team_Siteusers_id" to="Siteusers">
+      <foreign-key-column from="siteusers_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Question" name="FK_Question_Vote_id" to="Vote">
+      <foreign-key-column from="Vote_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Question" name="FK_Question_Questiontype_id" to="Questiontype">
+      <foreign-key-column from="Questiontype_id" to="id"/>
+    </foreign-key>
+    <foreign-key caption="Gender Segment" from="Segment" name="FK_Segment_Gender_id" to="Gender" visShowCaption="0">
+      <foreign-key-column from="Gender_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Siteusers" name="FK_Siteusers_Address_id" to="Address">
+      <foreign-key-column from="Address_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Siteusers" name="FK_Siteusers_Priviclass_id" to="Priviclass">
+      <foreign-key-column from="Priviclass_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Siteusers" name="FK_Siteusers_Mediapicture_id" to="Mediapicture">
+      <foreign-key-column from="Profilepicture_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Siteusers" name="FK_Siteusers_Education_id" to="Education">
+      <foreign-key-column from="Education_id" to="id"/>
+    </foreign-key>
+    <foreign-key caption="Gender Siteusers" from="Siteusers" name="FK_Siteusers_Gender_id" to="Gender" visShowCaption="0">
+      <foreign-key-column from="Gender_id" to="id"/>
+    </foreign-key>
+    <foreign-key caption="Language Siteusers" from="Siteusers" name="FK_Siteusers_Language_id" to="Language" visShowCaption="0">
+      <foreign-key-column from="Language_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Sitevars" name="FK_Sitevars_Team_id" to="Team">
+      <foreign-key-column from="Team_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="State" name="FK_State_Country_id" to="Country">
+      <foreign-key-column from="Country_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Team" name="FK_Team_Sporttype_id" to="Sporttype">
+      <foreign-key-column from="Sporttype_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Team" name="FK_Team_League_id" to="League">
+      <foreign-key-column from="League_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Team" name="FK_Team_Mediapicture_id" to="Mediapicture">
+      <foreign-key-column from="Mediapicture_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Team" name="FK_Team_Address_id" to="Address">
+      <foreign-key-column from="Homeaddress_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Teamsiteusersaddnlinfo" name="FK_Teamsiteusersaddnlinfo_Siteusers_id" to="Siteusers">
+      <foreign-key-column from="Siteusers_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Teamsiteusersaddnlinfo" name="FK_Teamsiteusersaddnlinfo_Priviclass_id" to="Priviclass">
+      <foreign-key-column from="Priviclass_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Vote" name="FK_Vote_Mediapicture_id" to="Mediapicture">
+      <foreign-key-column from="Mediapicture_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Vote" name="FK_Vote_Team_id" to="Team">
+      <foreign-key-column from="Team_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Vote" name="FK_Vote_Mediavideo_id" to="Mediavideo">
+      <foreign-key-column from="Mediavideo_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Vote" name="FK_Vote_Timezone_id" to="Timezone">
+      <foreign-key-column from="Timezone_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Vote" name="FK_Vote_Status_id" to="Status">
+      <foreign-key-column from="Status_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Vote" name="FK_Vote_Segment_id" to="Segment">
+      <foreign-key-column from="Segment_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Voteinstance" name="FK_Voteinstance_Vote_id" to="Vote">
+      <foreign-key-column from="Vote_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="PaymentRegister" name="FK_PaymentRegister_PPI_id" to="PPI">
+      <foreign-key-column from="ppi_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="PaymentRegister" name="FK_PaymentRegister_Siteusers_id" to="Siteusers">
+      <foreign-key-column from="Siteusers_id" to="id"/>
+    </foreign-key>
+    <many-to-many-relation mn-table="MtmSegment2address">
+      <many-to-many-foreign-key foreign-key="FK_MtmSegment2address_Address_id" relation-alias="Addresses"/>
+      <many-to-many-foreign-key foreign-key="FK_MtmSegment2address_Segment_id" relation-alias="Segments"/>
+    </many-to-many-relation>
+    <many-to-many-relation mn-table="MtmAnswer2answervalue">
+      <many-to-many-foreign-key foreign-key="FK_MtmAnswer2answervalue_Answer_id" relation-alias="Answers"/>
+      <many-to-many-foreign-key foreign-key="FK_MtmAnswer2answervalue_Answervalue_id" relation-alias="AnswerValues"/>
+    </many-to-many-relation>
+    <many-to-many-relation mn-table="MtmSiteusers2answervalue">
+      <many-to-many-foreign-key foreign-key="FK_MtmSiteusers2answervalue_Answervalue_id" relation-alias="AnswerValues"/>
+      <many-to-many-foreign-key foreign-key="FK_MtmSiteusers2answervalue_Siteusers_id" relation-alias="SiteUsers"/>
+    </many-to-many-relation>
+    <many-to-many-relation mn-table="MtmSiteusers2education">
+      <many-to-many-foreign-key foreign-key="FK_MtmSiteusers2education_Education_id" relation-alias="Educations"/>
+      <many-to-many-foreign-key foreign-key="FK_MtmSiteusers2education_Siteusers_id" relation-alias="SiteUsers"/>
+    </many-to-many-relation>
+    <many-to-many-relation mn-table="MtmSegment2fangroup">
+      <many-to-many-foreign-key foreign-key="FK_MtmSegment2fangroup_Fangroup_id" relation-alias="Fangroups"/>
+      <many-to-many-foreign-key foreign-key="FK_MtmSegment2fangroup_Segment_id" relation-alias="Segments"/>
+    </many-to-many-relation>
+    <many-to-many-relation mn-table="MtmFangroup2siteusers">
+      <many-to-many-foreign-key foreign-key="FK_MtmFangroup2siteusers_Fangroup_id" relation-alias="Fangroups"/>
+      <many-to-many-foreign-key foreign-key="FK_MtmFangroup2siteusers_Siteusers_id" relation-alias="SiteUsers"/>
+    </many-to-many-relation>
+    <many-to-many-relation mn-table="MtmSiteusers2team">
+      <many-to-many-foreign-key foreign-key="FK_MtmSiteusers2team_Siteusers_id" relation-alias="SiteUsers"/>
+      <many-to-many-foreign-key foreign-key="FK_MtmSiteusers2team_Team_id" relation-alias="Teams"/>
+    </many-to-many-relation>
+  </module>
+
+</orm-designer>

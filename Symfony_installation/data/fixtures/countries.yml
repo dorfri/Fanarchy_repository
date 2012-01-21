@@ -1,0 +1,751 @@
+Country:
+  Andorra:
+    name: Andorra
+    Continent: Europe
+  United Arab Emirates:
+    name: United Arab Emirates
+    Continent: Asia
+  Afghanistan:
+    name: Afghanistan
+    Continent: Asia
+  Antigua and Barbuda:
+    name: Antigua and Barbuda
+    Continent: North America
+  Anguilla:
+    name: Anguilla
+    Continent: North America
+  Albania:
+    name: Albania
+    Continent: Europe
+  Armenia:
+    name: Armenia
+    Continent: Asia
+  Angola:
+    name: Angola
+    Continent: Africa
+  Antarctica:
+    name: Antarctica
+    Continent: Antarctica
+  Argentina:
+    name: Argentina
+    Continent: South America
+  American Samoa:
+    name: American Samoa
+    Continent: Oceanic
+  Austria:
+    name: Austria
+    Continent: Europe
+  Australia:
+    name: Australia
+    Continent: Oceanic
+  Aruba:
+    name: Aruba
+    Continent: North America
+  Aland Islands:
+    name: Aland Islands
+    Continent: Europe
+  Azerbaijan:
+    name: Azerbaijan
+    Continent: Asia
+  Bosnia and Herzegovina:
+    name: Bosnia and Herzegovina
+    Continent: Europe
+  Barbados:
+    name: Barbados
+    Continent: North America
+  Bangladesh:
+    name: Bangladesh
+    Continent: Asia
+  Belgium:
+    name: Belgium
+    Continent: Europe
+  Burkina Faso:
+    name: Burkina Faso
+    Continent: Africa
+  Bulgaria:
+    name: Bulgaria
+    Continent: Europe
+  Bahrain:
+    name: Bahrain
+    Continent: Asia
+  Burundi:
+    name: Burundi
+    Continent: Africa
+  Benin:
+    name: Benin
+    Continent: Africa
+  Saint Barthélemy:
+    name: Saint Barthélemy
+    Continent: North America
+  Bermuda:
+    name: Bermuda
+    Continent: North America
+  Brunei:
+    name: Brunei
+    Continent: Asia
+  Bolivia:
+    name: Bolivia
+    Continent: South America
+  Bonaire, Saint Eustatius and Saba :
+    name: Bonaire, Saint Eustatius and Saba 
+    Continent: North America
+  Brazil:
+    name: Brazil
+    Continent: South America
+  Bahamas:
+    name: Bahamas
+    Continent: North America
+  Bhutan:
+    name: Bhutan
+    Continent: Asia
+  Bouvet Island:
+    name: Bouvet Island
+    Continent: Antarctica
+  Botswana:
+    name: Botswana
+    Continent: Africa
+  Belarus:
+    name: Belarus
+    Continent: Europe
+  Belize:
+    name: Belize
+    Continent: North America
+  Canada:
+    name: Canada
+    Continent: North America
+  Cocos Islands:
+    name: Cocos Islands
+    Continent: Asia
+  Democratic Republic of the Congo:
+    name: Democratic Republic of the Congo
+    Continent: Africa
+  Central African Republic:
+    name: Central African Republic
+    Continent: Africa
+  Republic of the Congo:
+    name: Republic of the Congo
+    Continent: Africa
+  Switzerland:
+    name: Switzerland
+    Continent: Europe
+  Ivory Coast:
+    name: Ivory Coast
+    Continent: Africa
+  Cook Islands:
+    name: Cook Islands
+    Continent: Oceanic
+  Chile:
+    name: Chile
+    Continent: South America
+  Cameroon:
+    name: Cameroon
+    Continent: Africa
+  China:
+    name: China
+    Continent: Asia
+  Colombia:
+    name: Colombia
+    Continent: South America
+  Costa Rica:
+    name: Costa Rica
+    Continent: North America
+  Cuba:
+    name: Cuba
+    Continent: North America
+  Cape Verde:
+    name: Cape Verde
+    Continent: Africa
+  Curaçao:
+    name: Curaçao
+    Continent: North America
+  Christmas Island:
+    name: Christmas Island
+    Continent: Asia
+  Cyprus:
+    name: Cyprus
+    Continent: Europe
+  Czech Republic:
+    name: Czech Republic
+    Continent: Europe
+  Germany:
+    name: Germany
+    Continent: Europe
+  Djibouti:
+    name: Djibouti
+    Continent: Africa
+  Denmark:
+    name: Denmark
+    Continent: Europe
+  Dominica:
+    name: Dominica
+    Continent: North America
+  Dominican Republic:
+    name: Dominican Republic
+    Continent: North America
+  Algeria:
+    name: Algeria
+    Continent: Africa
+  Ecuador:
+    name: Ecuador
+    Continent: South America
+  Estonia:
+    name: Estonia
+    Continent: Europe
+  Egypt:
+    name: Egypt
+    Continent: Africa
+  Western Sahara:
+    name: Western Sahara
+    Continent: Africa
+  Eritrea:
+    name: Eritrea
+    Continent: Africa
+  Spain:
+    name: Spain
+    Continent: Europe
+  Ethiopia:
+    name: Ethiopia
+    Continent: Africa
+  Finland:
+    name: Finland
+    Continent: Europe
+  Fiji:
+    name: Fiji
+    Continent: Oceanic
+  Falkland Islands:
+    name: Falkland Islands
+    Continent: South America
+  Micronesia:
+    name: Micronesia
+    Continent: Oceanic
+  Faroe Islands:
+    name: Faroe Islands
+    Continent: Europe
+  France:
+    name: France
+    Continent: Europe
+  Gabon:
+    name: Gabon
+    Continent: Africa
+  United Kingdom:
+    name: United Kingdom
+    Continent: Europe
+  Grenada:
+    name: Grenada
+    Continent: North America
+  Georgia:
+    name: Georgia
+    Continent: Asia
+  French Guiana:
+    name: French Guiana
+    Continent: South America
+  Guernsey:
+    name: Guernsey
+    Continent: Europe
+  Ghana:
+    name: Ghana
+    Continent: Africa
+  Gibraltar:
+    name: Gibraltar
+    Continent: Europe
+  Greenland:
+    name: Greenland
+    Continent: North America
+  Gambia:
+    name: Gambia
+    Continent: Africa
+  Guinea:
+    name: Guinea
+    Continent: Africa
+  Guadeloupe:
+    name: Guadeloupe
+    Continent: North America
+  Equatorial Guinea:
+    name: Equatorial Guinea
+    Continent: Africa
+  Greece:
+    name: Greece
+    Continent: Europe
+  South Georgia and the South Sandwich Islands:
+    name: South Georgia and the South Sandwich Islands
+    Continent: Antarctica
+  Guatemala:
+    name: Guatemala
+    Continent: North America
+  Guam:
+    name: Guam
+    Continent: Oceanic
+  Guinea-Bissau:
+    name: Guinea-Bissau
+    Continent: Africa
+  Guyana:
+    name: Guyana
+    Continent: South America
+  Hong Kong:
+    name: Hong Kong
+    Continent: Asia
+  Heard Island and McDonald Islands:
+    name: Heard Island and McDonald Islands
+    Continent: Antarctica
+  Honduras:
+    name: Honduras
+    Continent: North America
+  Croatia:
+    name: Croatia
+    Continent: Europe
+  Haiti:
+    name: Haiti
+    Continent: North America
+  Hungary:
+    name: Hungary
+    Continent: Europe
+  Indonesia:
+    name: Indonesia
+    Continent: Asia
+  Ireland:
+    name: Ireland
+    Continent: Europe
+  Israel:
+    name: Israel
+    Continent: Asia
+  Isle of Man:
+    name: Isle of Man
+    Continent: Europe
+  India:
+    name: India
+    Continent: Asia
+  British Indian Ocean Territory:
+    name: British Indian Ocean Territory
+    Continent: Asia
+  Iraq:
+    name: Iraq
+    Continent: Asia
+  Iran:
+    name: Iran
+    Continent: Asia
+  Iceland:
+    name: Iceland
+    Continent: Europe
+  Italy:
+    name: Italy
+    Continent: Europe
+  Jersey:
+    name: Jersey
+    Continent: Europe
+  Jamaica:
+    name: Jamaica
+    Continent: North America
+  Jordan:
+    name: Jordan
+    Continent: Asia
+  Japan:
+    name: Japan
+    Continent: Asia
+  Kenya:
+    name: Kenya
+    Continent: Africa
+  Kyrgyzstan:
+    name: Kyrgyzstan
+    Continent: Asia
+  Cambodia:
+    name: Cambodia
+    Continent: Asia
+  Kiribati:
+    name: Kiribati
+    Continent: Oceanic
+  Comoros:
+    name: Comoros
+    Continent: Africa
+  Saint Kitts and Nevis:
+    name: Saint Kitts and Nevis
+    Continent: North America
+  North Korea:
+    name: North Korea
+    Continent: Asia
+  South Korea:
+    name: South Korea
+    Continent: Asia
+  Kosovo:
+    name: Kosovo
+    Continent: Europe
+  Kuwait:
+    name: Kuwait
+    Continent: Asia
+  Cayman Islands:
+    name: Cayman Islands
+    Continent: North America
+  Kazakhstan:
+    name: Kazakhstan
+    Continent: Asia
+  Laos:
+    name: Laos
+    Continent: Asia
+  Lebanon:
+    name: Lebanon
+    Continent: Asia
+  Saint Lucia:
+    name: Saint Lucia
+    Continent: North America
+  Liechtenstein:
+    name: Liechtenstein
+    Continent: Europe
+  Sri Lanka:
+    name: Sri Lanka
+    Continent: Asia
+  Liberia:
+    name: Liberia
+    Continent: Africa
+  Lesotho:
+    name: Lesotho
+    Continent: Africa
+  Lithuania:
+    name: Lithuania
+    Continent: Europe
+  Luxembourg:
+    name: Luxembourg
+    Continent: Europe
+  Latvia:
+    name: Latvia
+    Continent: Europe
+  Libya:
+    name: Libya
+    Continent: Africa
+  Morocco:
+    name: Morocco
+    Continent: Africa
+  Monaco:
+    name: Monaco
+    Continent: Europe
+  Moldova:
+    name: Moldova
+    Continent: Europe
+  Montenegro:
+    name: Montenegro
+    Continent: Europe
+  Saint Martin:
+    name: Saint Martin
+    Continent: North America
+  Madagascar:
+    name: Madagascar
+    Continent: Africa
+  Marshall Islands:
+    name: Marshall Islands
+    Continent: Oceanic
+  Macedonia:
+    name: Macedonia
+    Continent: Europe
+  Mali:
+    name: Mali
+    Continent: Africa
+  Myanmar:
+    name: Myanmar
+    Continent: Asia
+  Mongolia:
+    name: Mongolia
+    Continent: Asia
+  Macao:
+    name: Macao
+    Continent: Asia
+  Northern Mariana Islands:
+    name: Northern Mariana Islands
+    Continent: Oceanic
+  Martinique:
+    name: Martinique
+    Continent: North America
+  Mauritania:
+    name: Mauritania
+    Continent: Africa
+  Montserrat:
+    name: Montserrat
+    Continent: North America
+  Malta:
+    name: Malta
+    Continent: Europe
+  Mauritius:
+    name: Mauritius
+    Continent: Africa
+  Maldives:
+    name: Maldives
+    Continent: Asia
+  Malawi:
+    name: Malawi
+    Continent: Africa
+  Mexico:
+    name: Mexico
+    Continent: North America
+  Malaysia:
+    name: Malaysia
+    Continent: Asia
+  Mozambique:
+    name: Mozambique
+    Continent: Africa
+  Namibia:
+    name: Namibia
+    Continent: Africa
+  New Caledonia:
+    name: New Caledonia
+    Continent: Oceanic
+  Niger:
+    name: Niger
+    Continent: Africa
+  Norfolk Island:
+    name: Norfolk Island
+    Continent: Oceanic
+  Nigeria:
+    name: Nigeria
+    Continent: Africa
+  Nicaragua:
+    name: Nicaragua
+    Continent: North America
+  Netherlands:
+    name: Netherlands
+    Continent: Europe
+  Norway:
+    name: Norway
+    Continent: Europe
+  Nepal:
+    name: Nepal
+    Continent: Asia
+  Nauru:
+    name: Nauru
+    Continent: Oceanic
+  Niue:
+    name: Niue
+    Continent: Oceanic
+  New Zealand:
+    name: New Zealand
+    Continent: Oceanic
+  Oman:
+    name: Oman
+    Continent: Asia
+  Panama:
+    name: Panama
+    Continent: North America
+  Peru:
+    name: Peru
+    Continent: South America
+  French Polynesia:
+    name: French Polynesia
+    Continent: Oceanic
+  Papua New Guinea:
+    name: Papua New Guinea
+    Continent: Oceanic
+  Philippines:
+    name: Philippines
+    Continent: Asia
+  Pakistan:
+    name: Pakistan
+    Continent: Asia
+  Poland:
+    name: Poland
+    Continent: Europe
+  Saint Pierre and Miquelon:
+    name: Saint Pierre and Miquelon
+    Continent: North America
+  Pitcairn:
+    name: Pitcairn
+    Continent: Oceanic
+  Puerto Rico:
+    name: Puerto Rico
+    Continent: North America
+  Palestinian Territory:
+    name: Palestinian Territory
+    Continent: Asia
+  Portugal:
+    name: Portugal
+    Continent: Europe
+  Palau:
+    name: Palau
+    Continent: Oceanic
+  Paraguay:
+    name: Paraguay
+    Continent: South America
+  Qatar:
+    name: Qatar
+    Continent: Asia
+  Reunion:
+    name: Reunion
+    Continent: Africa
+  Romania:
+    name: Romania
+    Continent: Europe
+  Serbia:
+    name: Serbia
+    Continent: Europe
+  Russia:
+    name: Russia
+    Continent: Europe
+  Rwanda:
+    name: Rwanda
+    Continent: Africa
+  Saudi Arabia:
+    name: Saudi Arabia
+    Continent: Asia
+  Solomon Islands:
+    name: Solomon Islands
+    Continent: Oceanic
+  Seychelles:
+    name: Seychelles
+    Continent: Africa
+  Sudan:
+    name: Sudan
+    Continent: Africa
+  South Sudan:
+    name: South Sudan
+    Continent: Africa
+  Sweden:
+    name: Sweden
+    Continent: Europe
+  Singapore:
+    name: Singapore
+    Continent: Asia
+  Saint Helena:
+    name: Saint Helena
+    Continent: Africa
+  Slovenia:
+    name: Slovenia
+    Continent: Europe
+  Svalbard and Jan Mayen:
+    name: Svalbard and Jan Mayen
+    Continent: Europe
+  Slovakia:
+    name: Slovakia
+    Continent: Europe
+  Sierra Leone:
+    name: Sierra Leone
+    Continent: Africa
+  San Marino:
+    name: San Marino
+    Continent: Europe
+  Senegal:
+    name: Senegal
+    Continent: Africa
+  Somalia:
+    name: Somalia
+    Continent: Africa
+  Suriname:
+    name: Suriname
+    Continent: South America
+  Sao Tome and Principe:
+    name: Sao Tome and Principe
+    Continent: Africa
+  El Salvador:
+    name: El Salvador
+    Continent: North America
+  Sint Maarten:
+    name: Sint Maarten
+    Continent: North America
+  Syria:
+    name: Syria
+    Continent: Asia
+  Swaziland:
+    name: Swaziland
+    Continent: Africa
+  Turks and Caicos Islands:
+    name: Turks and Caicos Islands
+    Continent: North America
+  Chad:
+    name: Chad
+    Continent: Africa
+  French Southern Territories:
+    name: French Southern Territories
+    Continent: Antarctica
+  Togo:
+    name: Togo
+    Continent: Africa
+  Thailand:
+    name: Thailand
+    Continent: Asia
+  Tajikistan:
+    name: Tajikistan
+    Continent: Asia
+  Tokelau:
+    name: Tokelau
+    Continent: Oceanic
+  East Timor:
+    name: East Timor
+    Continent: Oceanic
+  Turkmenistan:
+    name: Turkmenistan
+    Continent: Asia
+  Tunisia:
+    name: Tunisia
+    Continent: Africa
+  Tonga:
+    name: Tonga
+    Continent: Oceanic
+  Turkey:
+    name: Turkey
+    Continent: Asia
+  Trinidad and Tobago:
+    name: Trinidad and Tobago
+    Continent: North America
+  Tuvalu:
+    name: Tuvalu
+    Continent: Oceanic
+  Taiwan:
+    name: Taiwan
+    Continent: Asia
+  Tanzania:
+    name: Tanzania
+    Continent: Africa
+  Ukraine:
+    name: Ukraine
+    Continent: Europe
+  Uganda:
+    name: Uganda
+    Continent: Africa
+  United States Minor Outlying Islands:
+    name: United States Minor Outlying Islands
+    Continent: Oceanic
+  United States:
+    name: United States
+    Continent: North America
+  Uruguay:
+    name: Uruguay
+    Continent: South America
+  Uzbekistan:
+    name: Uzbekistan
+    Continent: Asia
+  Vatican:
+    name: Vatican
+    Continent: Europe
+  Saint Vincent and the Grenadines:
+    name: Saint Vincent and the Grenadines
+    Continent: North America
+  Venezuela:
+    name: Venezuela
+    Continent: South America
+  British Virgin Islands:
+    name: British Virgin Islands
+    Continent: North America
+  U.S. Virgin Islands:
+    name: U.S. Virgin Islands
+    Continent: North America
+  Vietnam:
+    name: Vietnam
+    Continent: Asia
+  Vanuatu:
+    name: Vanuatu
+    Continent: Oceanic
+  Wallis and Futuna:
+    name: Wallis and Futuna
+    Continent: Oceanic
+  Samoa:
+    name: Samoa
+    Continent: Oceanic
+  Yemen:
+    name: Yemen
+    Continent: Asia
+  Mayotte:
+    name: Mayotte
+    Continent: Africa
+  South Africa:
+    name: South Africa
+    Continent: Africa
+  Zambia:
+    name: Zambia
+    Continent: Africa
+  Zimbabwe:
+    name: Zimbabwe
+    Continent: Africa

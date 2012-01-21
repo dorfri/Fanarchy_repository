@@ -1,0 +1,35 @@
+Siteusers:
+  Doron Friedland:
+    firstname: Doron
+    lastname: Friedland
+    email: dorfri@gmail.com
+    dateofbirth: 0
+    Gender: male
+    password: dorfri
+    sexorientation: Straight
+    relationshipstatus: single
+    Language: Hebrew
+    religion: Jewish
+    createddate: 0
+    isactive: 1
+    Address: address_example
+    Priviclass: High Priviledge
+    Language: Hebrew
+    Teams: [Maccabi Tel-Aviv,Real Madrid]
+  Samuel Aloni:
+    firstname: Sam
+    lastname: Aloni
+    email: samuel@gmail.com
+    dateofbirth: 0
+    Gender: male
+    password: samuel
+    sexorientation: Straight
+    relationshipstatus: married
+    Language: English
+    religion: Jewish
+    createddate: 0
+    isactive: 1
+    Address: address_example
+    Priviclass: High Priviledge
+    Language: English
+    Teams: [Maccabi Tel-Aviv,Real Madrid]

@@ -1,0 +1,19 @@
+Team:
+  Maccabi Tel-Aviv:
+    name: Maccabi Tel Aviv
+    websiteurl: www.maccabi.co.il
+    stadiumname: Blumfield
+    phonenumber: 03-9767755
+    fax: 03-9767755
+    createddate: 0
+    Sporttype: Soccer
+    League: Israely_League
+  Real Madrid:
+    name: Real Mardrid
+    websiteurl: www.real.com
+    stadiumname: Santiago Bernebao
+    phonenumber: 0115456655
+    fax: 0115456656
+    createddate: 0
+    Sporttype: Soccer
+    League: Spanish_League

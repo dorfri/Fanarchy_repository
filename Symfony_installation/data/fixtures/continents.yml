@@ -1,0 +1,15 @@
+Continent:
+  Asia:
+    name: Asia
+  Africa:
+    name: Africa
+  Oceanic:
+    name: Oceanic
+  Europe:
+    name: Europe
+  North America:
+    name: North America
+  South America:
+    name: South America
+  Antarctica:
+    name: Antarctica

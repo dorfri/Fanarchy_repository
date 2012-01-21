@@ -1,0 +1,104 @@
+Jan 17 18:52:56 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 18:52:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 17 18:52:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 17 18:52:57 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jan 17 18:52:57 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib/controller/default/templates/indexSuccess.php"
+Jan 17 18:52:57 symfony [info] {sfPHPView} Decorate content with "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 18:52:57 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 18:52:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 17 18:52:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 17 18:52:57 symfony [info] {sfWebDebugLogger} Configuration 1342.74 ms (9)
+Jan 17 18:52:57 symfony [info] {sfWebDebugLogger} Factories 460.06 ms (1)
+Jan 17 18:52:57 symfony [info] {sfWebDebugLogger} Action "default/index" 0.63 ms (1)
+Jan 17 18:52:57 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 68.56 ms (1)
+Jan 17 18:52:57 symfony [info] {sfWebResponse} Send content (29302 o)
+Jan 17 18:52:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 17 18:52:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name, c.continent_id AS c__continent_id FROM country c WHERE (c.name = ?) LIMIT 1 - (Andorra)
+Jan 17 18:52:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name FROM continent c WHERE (c.id = ?) - (4)
+Jan 17 18:52:57 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE country SET name = ? WHERE id = ? - (Andorra1, 1)
+Jan 17 18:53:13 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 18:53:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 17 18:53:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 17 18:53:13 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jan 17 18:53:13 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib/controller/default/templates/indexSuccess.php"
+Jan 17 18:53:13 symfony [info] {sfPHPView} Decorate content with "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 18:53:13 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 18:53:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 17 18:53:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 17 18:53:13 symfony [info] {sfWebDebugLogger} Configuration 41.90 ms (9)
+Jan 17 18:53:13 symfony [info] {sfWebDebugLogger} Factories 118.16 ms (1)
+Jan 17 18:53:13 symfony [info] {sfWebDebugLogger} Action "default/index" 0.76 ms (1)
+Jan 17 18:53:13 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 35.97 ms (1)
+Jan 17 18:53:13 symfony [info] {sfWebResponse} Send content (29447 o)
+Jan 17 18:53:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 17 18:53:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name, c.continent_id AS c__continent_id FROM country c WHERE (c.name = ?) LIMIT 1 - (Andorra)
+Jan 17 18:53:57 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 18:53:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 17 18:53:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 17 18:53:57 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jan 17 18:53:57 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib/controller/default/templates/indexSuccess.php"
+Jan 17 18:53:57 symfony [info] {sfPHPView} Decorate content with "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 18:53:57 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 18:53:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 17 18:53:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 17 18:53:57 symfony [info] {sfWebDebugLogger} Configuration 33.96 ms (9)
+Jan 17 18:53:57 symfony [info] {sfWebDebugLogger} Factories 109.53 ms (1)
+Jan 17 18:53:57 symfony [info] {sfWebDebugLogger} Action "default/index" 0.78 ms (1)
+Jan 17 18:53:57 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 38.67 ms (1)
+Jan 17 18:53:57 symfony [info] {sfWebResponse} Send content (29376 o)
+Jan 17 18:53:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 17 18:53:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name, c.continent_id AS c__continent_id FROM country c WHERE (c.name = ?) LIMIT 1 - (Andorra1)
+Jan 17 18:53:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name FROM continent c WHERE (c.id = ?) - (4)
+Jan 17 18:53:58 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE country SET name = ? WHERE id = ? - (Andorra, 1)
+Jan 17 19:06:57 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 19:06:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 17 19:06:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 17 19:06:57 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jan 17 19:06:57 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib/controller/default/templates/indexSuccess.php"
+Jan 17 19:06:57 symfony [info] {sfPHPView} Decorate content with "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 19:06:57 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 19:06:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 17 19:06:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 17 19:06:57 symfony [info] {sfWebDebugLogger} Configuration 29.27 ms (9)
+Jan 17 19:06:57 symfony [info] {sfWebDebugLogger} Factories 100.41 ms (1)
+Jan 17 19:06:57 symfony [info] {sfWebDebugLogger} Action "default/index" 0.46 ms (1)
+Jan 17 19:06:57 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 69.13 ms (1)
+Jan 17 19:06:57 symfony [info] {sfWebResponse} Send content (29267 o)
+Jan 17 19:06:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 17 19:06:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name, c.continent_id AS c__continent_id FROM country c WHERE (c.name = ?) LIMIT 1 - (Andorra1)
+Jan 17 19:07:14 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 19:07:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 17 19:07:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 17 19:07:14 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jan 17 19:07:14 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib/controller/default/templates/indexSuccess.php"
+Jan 17 19:07:14 symfony [info] {sfPHPView} Decorate content with "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 19:07:14 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 19:07:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 17 19:07:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 17 19:07:14 symfony [info] {sfWebDebugLogger} Configuration 23.10 ms (9)
+Jan 17 19:07:14 symfony [info] {sfWebDebugLogger} Factories 84.91 ms (1)
+Jan 17 19:07:14 symfony [info] {sfWebDebugLogger} Action "default/index" 0.55 ms (1)
+Jan 17 19:07:14 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 40.25 ms (1)
+Jan 17 19:07:14 symfony [info] {sfWebResponse} Send content (29414 o)
+Jan 17 19:07:40 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 19:07:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jan 17 19:07:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jan 17 19:07:40 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Jan 17 19:07:40 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib/controller/default/templates/indexSuccess.php"
+Jan 17 19:07:40 symfony [info] {sfPHPView} Decorate content with "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 19:07:40 symfony [info] {sfPHPView} Render "D:\symfony-1.4.16\lib\controller\default\templates/defaultLayout.php"
+Jan 17 19:07:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jan 17 19:07:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jan 17 19:07:40 symfony [info] {sfWebDebugLogger} Configuration 40.32 ms (9)
+Jan 17 19:07:40 symfony [info] {sfWebDebugLogger} Factories 202.21 ms (1)
+Jan 17 19:07:40 symfony [info] {sfWebDebugLogger} Action "default/index" 0.42 ms (1)
+Jan 17 19:07:40 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 53.61 ms (1)
+Jan 17 19:07:40 symfony [info] {sfWebResponse} Send content (29266 o)
+Jan 17 19:07:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 17 19:07:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name, c.continent_id AS c__continent_id FROM country c WHERE (c.name = ?) LIMIT 1 - (Andorra)
+Jan 17 19:07:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name FROM continent c WHERE (c.id = ?) - (4)
+Jan 17 19:09:00 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 19:09:31 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Jan 17 19:09:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jan 17 19:09:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name, c.continent_id AS c__continent_id FROM country c WHERE (c.name = ?) LIMIT 1 - (Andorra)
+Jan 17 19:09:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.name AS c__name FROM continent c WHERE (c.id = ?) - (4)
