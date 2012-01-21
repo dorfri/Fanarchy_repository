@@ -11,7 +11,7 @@ function vanilla2bridge_init() {
 	
 	if (elgg_is_logged_in()) {
 		$user = elgg_get_logged_in_user_entity();
-		$discussions_text=get_plugin_setting($name, $plugin_name );
+		$discussions_text=get_plugin_setting("forum_title", $plugin_name );
 		elgg_register_menu_item('filter', array(
 			'name' => 'Discussions',
 			'href' => "/activity/discussions",
